@@ -53,18 +53,6 @@ Once the app is running and the tables are created, you can seed the database wi
 ### Running the tests
     yarn run test
 
-#### Obtaining a Bearer Token
-In order to make requests to the API you will need to send an Authorization header with a bearer token attached, e.g.,
-
-    Authorization: Bearer {bearerToken}
-
-To get a valid token you can hit http://localhost:3000/oauth/token with a body including your username, password and the grant_type of password, e.g.
-
-    curl -X POST \
-      http://localhost:3000/oauth/token \
-      -H 'content-type: application/x-www-form-urlencoded' \
-      -d 'username=kckolz%40gmail.com&password=password&grant_type=password'
-
 ## Contact
 Kevin Kolz - kckolz@gmail.com
 
