@@ -1,7 +1,8 @@
 {
-  "name": "express-typescript-sequelize-seed",
+  "name": "express-typescript-seed",
   "version": "1.0.0",
   "private": false,
+  "author": "Kevin Kolz <kckolz@gmail.com>",
   "scripts": {
     "start": "yarn run build && yarn run serve",
     "test": "yarn run build && rimraf tests/sqlite.db && NODE_ENV=test jest --forceExit --verbose dist/tests/*.test.js",
