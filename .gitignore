@@ -9,8 +9,6 @@ dist/
 assets/
 .DS_Store
 npm-debug.log
-.env
-.env.*
 tests/sqlite.db
 *.log
 *.iml
