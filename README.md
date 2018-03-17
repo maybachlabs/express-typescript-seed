@@ -17,9 +17,8 @@ Integration Testing with [SuperTest](https://github.com/visionmedia/supertest)
 This project uses the [Dotenv](https://www.npmjs.com/package/dotenv) library to load sensitive data such
 as database passwords and client secrets. 
 
-There is a `.env` file included at the root of this project as an example, but
-you should never check this file into your source control. Update the `.env` file with the pertinent information
-for your project and remove it from your source control system.
+There is a `.env.example` file included at the root of this project as an example, rename it to '.env' (.env is not under version control). Update the `.env` file with the pertinent information
+for your project.
 
 ### RabbitMQ
 Install and run [RabbitMQ](https://www.rabbitmq.com/) with the default settings

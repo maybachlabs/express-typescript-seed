@@ -11,7 +11,7 @@ import {errorHandler} from "./errors/ErrorHandler";
 import {Roles} from "./auth/roles";
 import {MessageManager} from "./managers/MessageManager";
 import {InternalServerError} from "./errors/InternalServerError";
-import {logger} from "./logger";
+import {logger} from "./lib/logger";
 import morgan = require("morgan");
 
 const amqplib = require('amqplib');

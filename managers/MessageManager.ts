@@ -1,5 +1,5 @@
 import {MessageError} from "../errors/MessageError";
-import {logger} from "../logger";
+import {logger} from "../lib/logger";
 
 export abstract class MessageManager {
 
