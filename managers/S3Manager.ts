@@ -1,7 +1,7 @@
 import {MessageManager} from "./MessageManager";
 import {MessageQueueEnum} from "../models/enums/MessageQueueEnum";
 import AWS = require('aws-sdk');
-import {logger} from "../logger";
+import {logger} from "../lib/logger";
 
 export class S3Manager extends MessageManager {
 

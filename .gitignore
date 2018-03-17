@@ -12,3 +12,4 @@ npm-debug.log
 tests/sqlite.db
 *.log
 *.iml
+.env

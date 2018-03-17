@@ -4,7 +4,7 @@ import {RoleEnum} from "../models/enums/RoleEnum";
 import {Auth} from "../auth/auth";
 import {AuthError} from "../errors/AuthError";
 import {S3Manager} from "./S3Manager";
-import {logger} from "../logger";
+import {logger} from "../lib/logger";
 
 export class UserManager {
 
