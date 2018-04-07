@@ -5,7 +5,7 @@ import {NotFoundError} from "./NotFoundError";
 import {DatabaseError as SequelizeError, ValidationError as SequelizeValidationError} from "sequelize";
 import {InternalServerError} from "./InternalServerError";
 import {ValidationError} from "./ValidationError";
-import {logger} from "../logger";
+import {logger} from "../lib/logger";
 
 export function errorHandler(error, req, res, next) {
 
