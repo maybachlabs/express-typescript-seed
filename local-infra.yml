@@ -1,0 +1,25 @@
+version: '3.4'
+
+services:
+
+  db:
+    image: postgres
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_PASSWORD: password
+      PGDATA: /var/lib/postgresql/data/pgdata
+    volumes:
+       - pg-data:/var/lib/postgresql/data/pgdata
+  
+  rabbitmq:
+    image: rabbitmq
+    ports:
+      - 5672:5672
+      - 8080:15672
+    volumes:
+      - rabbit-data:/var/lib/rabbitmq
+  
+volumes:
+  pg-data:
+  rabbit-data:
