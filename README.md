@@ -22,7 +22,6 @@ docker stack deploy -c local-infra.yml infra
 # connect to postgres via postgres:password@localhost:5432
 # create 'seed' user with password 'password'
 # create 'seed' database and set the 'seed' user as the owner
-# updated
 cp .env.example .env
 yarn run start
 # wait for app to start
