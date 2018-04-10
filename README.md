@@ -13,6 +13,22 @@ Environment based configuration using [Dotenv](https://www.npmjs.com/package/dot
 
 Integration Testing with [SuperTest](https://github.com/visionmedia/supertest)
 
+## Quickstart
+```
+npm install -g yarn
+yarn install
+# install docker https://docs.docker.com/install/
+docker stack deploy -c local-infra.yml infra
+# connect to postgres via postgres:password@localhost:5432
+# create 'seed' user with password 'password'
+# create 'seed' database and set the 'seed' user as the owner
+cp .env.example .env
+yarn run start
+# wait for app to start
+yarn global add sequelize-cli
+sequelize db:seed:all 
+```
+
 ## Environment Setup
 This project uses the [Dotenv](https://www.npmjs.com/package/dotenv) library to load sensitive data such
 as database passwords and client secrets. 
@@ -21,10 +37,10 @@ There is a `.env.example` file included at the root of this project as an exampl
 for your project.
 
 ### RabbitMQ
-Install and run [RabbitMQ](https://www.rabbitmq.com/) with the default settings
+Install and run [RabbitMQ](https://www.rabbitmq.com/) with the default settings (or use the provided local-infra.yml in conjunction with docker-compose/swarm)
 
 ### Database
-You will need a [PostgreSQL](https://www.postgresql.org) database running on localhost:5432
+You will need a [PostgreSQL](https://www.postgresql.org) database running on localhost:5432 (or use the provided local-infra.yml in conjunction with docker-compose/swarm)
 
 The setup of PostgreSQL is beyond the scope of this guide. Please reference the [Install Guides](https://wiki.postgresql.org/wiki/Detailed_installation_guides)
 for help installing PostgreSQL on your machine.
@@ -43,7 +59,7 @@ You can also run the app in debug mode and attach a [Debugger](https://www.jetbr
 Once the app is running and the tables are created, you can seed the database with the sequelize-cli.
  Install the sequelize-cli by running 
  
-     yarn install --g sequelize-cli
+     yarn global add sequelize-cli
      
  then run 
     
