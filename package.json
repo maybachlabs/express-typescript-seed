@@ -16,7 +16,7 @@
   "dependencies": {
     "amqplib": "^0.5.2",
     "aws-sdk": "^2.175.0",
-    "bcrypt": "^1.0.3",
+    "bcrypt": "^5.0.0",
     "body-parser": "^1.14.1",
     "compression": "^1.7.1",
     "connect-ensure-login": "^0.1.1",
